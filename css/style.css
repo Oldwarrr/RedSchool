@@ -95,10 +95,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 .container{
-    max-width: 1085px;
+    max-width: 1135px;
     height: inherit;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 40px;
 
 
 }
@@ -116,12 +116,11 @@ h1, h2, h3, h4, h5, h6 {
 .header__top{
     height: 80px;
 }
-
-.header-left{
-    display: flex;
-    justify-content: space-between;
-    width: 438px;
-    padding-right: 30px;
+.header-logo{
+    background: url("../img/header/logo-1.png") no-repeat;
+    width: 121px;
+    height: 68px;
+    flex-grow: 0.4;
 }
 .header__top{
     background-color: #7B8187;
@@ -133,6 +132,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .city{
     text-decoration: underline;
+    flex-grow: 1;
+    margin-left: 10px;
 }
 .number{
     margin-left: 20px;
@@ -141,11 +142,14 @@ h1, h2, h3, h4, h5, h6 {
 .city,.number,.btn, .a-btn{
     display: inline-block;
 }
-.city:hover{
+.city a{
+    color: #fff;
+}
+.city a:hover{
     color: #E31E24;
     text-decoration: underline;
 }
-.city:active{
+.city a:active{
     color: #000;
     text-decoration: underline;
 }
@@ -170,19 +174,24 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     background-color: #000;
 }
-
-
+.handset{
+    display: none;
+}
 /*Меню навигации*/
+.header__nav{
 
+}
 
 .header__nav__menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header__nav__menu__link{
     display: block;
-    padding: 24px 16px 20px 9px;
+    padding: 20px 10px;
+    line-height: 21px;
     color: #000;
     font-size: 18px;
     text-transform: uppercase;
@@ -202,10 +211,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav__submenu{
     display: none;
     position: absolute;
+    z-index: 5;
+}
+.submenu li{
+    width: 270px;
 }
 .submenu__link{
     display: block;
-    width: 270px;
+    width: 100%;
     height: 46px;
     color: #000;
     font-size: 18px;
@@ -213,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 12px;
     background-color: #DCD7D7;
 }
-.submenu>li:not(:last-child){
+.submenu li:not(:last-child){
     border-bottom: 2px solid #fff;
 }
 .header__nav__menu li:first-child:hover .nav__submenu{
@@ -252,8 +265,121 @@ h1, h2, h3, h4, h5, h6 {
     top: 13px;
 }
 
+/*Медиа к шапке*/
+@media (max-width: 1023px){
+    .header-logo{
+        background: url("../img/header/logo-2.png") no-repeat;
+        width: 108px;
+        height: 61px;
+    }
+    .btn,.a-btn{
+        min-width: 170px;
+    }
+    .btn,.a-btn,.city,.number{
+        font-size: 18px;
+    }
+    .burger{
+        margin-left: 15px;
+    }
 
+    .header__nav__menu{
+        flex-wrap: wrap;
+    }
+    .header__nav__menu>li{
+        width: 25%;
+        text-align: center;
+    }
 
+}
+
+@media (max-width: 857px){
+    .burger{
+        display: block;
+    }
+    .header__nav{
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .container{
+        padding: 0 20px;
+    }
+    .burger{
+        order: 2;
+        margin-left: 9px;
+    }
+    .city{
+        order: 1;
+    }
+    .header-row{
+        height: 40px;
+        padding-top: 15px;
+        display: grid;
+        grid-template-areas:
+
+        "a a a b c d "
+        "a a a b e d ";
+    }
+    .header__top{
+        height: 58px;
+    }
+    .header-logo{
+        grid-area: a;
+        background-image: url("../img/header/logo-3.png");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        width: 54px;
+        height: 30px;
+    }
+    .header-row .btn{
+        grid-area: b;
+        min-width: 90px;
+        padding: 9px 2px 8px 5px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .number{
+        grid-area: c;
+    }
+    .burger{
+        grid-area: d;
+        width: 32px;
+        height: 26px;
+    }
+    .burger span,.burger span::before,.burger span::after{
+        width: 100%;
+        position: absolute;
+        top: 11px;
+        left: 0;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+    .burger span::before{
+        content: "";
+        top: -11px;
+    }
+    .burger span::after{
+        content: "";
+        top: 11px;
+    }
+    .city{
+        grid-area: e;
+    }
+    .number,.city{
+        font-size: 12px;
+        line-height: 12px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 372px) {
+    .header-row .btn{
+        display: none;
+    }
+}
 
 
 
@@ -268,8 +394,87 @@ main{
     max-width: 100%;
 
 }
+
+/*Footer*/
+
+
 footer{
     max-width: 100%;
-    height: 562px;
-    background-color: #C4C4C4;;
+
+    background-color: #C4C4C4;
+    padding: 33px 0 37px 0;
+}
+.footer__top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    border-bottom: 2px solid #fff;
+}
+.footer__top__about,.footer__top__students{
+    margin-right: 10px;
+    min-width: 180px;
+}
+.footer__top__about{
+    min-width: 148px;
+}
+.footer__top a{
+    display: block;
+    margin-bottom: 10px;
+}
+.footer__nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 690px;
+}
+.footer__top__link,.footer__nav__link{
+    color: #000;
+    font-size: 14px;
+}
+.footer__top ul>li:first-child a,.footer__nav__link{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.footer__nav__link{
+    align-content: start;
+}
+.footer__nav li:not(:last-child){
+    margin-right: 15px;
+}
+
+@media (max-width: 768px){
+    .footer__nav{
+        justify-content: flex-start;
+    }
+    .footer__top__link,.footer__nav__link{
+        font-size: 12px;
+    }
+    .footer__top ul>li:first-child a,.footer__nav__link{
+        font-size: 14px;
+    }
+}
+@media (max-width: 537px) {
+    .footer__top{
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+    .footer__top__about,.footer__top__students{
+        min-width: 45%;
+        width: 45%;
+    }
+    .footer__nav{
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+@media (max-width: 390px) {
+    .footer__nav li:nth-child(4){
+        margin: 0;
+    }
+    .footer__top__link,.footer__nav__link,.footer__top ul>li:first-child a{
+        font-size: 12px;
+    }
 }
