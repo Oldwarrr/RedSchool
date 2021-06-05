@@ -144,6 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 .black{
     color: #000;
     margin-left: 0;
+    line-height: 24px;
 }
 .city,.number,.btn, .a-btn{
     display: inline-block;
@@ -475,6 +476,12 @@ footer{
         margin-top: 20px;
         width: 100%;
     }
+    .footer__bottom{
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+
 }
 @media (max-width: 390px) {
     .footer__nav li:nth-child(4){
@@ -526,6 +533,7 @@ footer{
 }
 .footer__social__link{
     margin-left: 7px;
+    margin-top: 10px;
 }
 .vk,.odnoklassniki,.inst,.youtube{
     background-repeat: no-repeat;
@@ -550,7 +558,60 @@ footer{
     width: 41px;
     height: 41px;
 }
-.footer__bottom__contacts p{
+.footer__bottom__contacts p, .rights{
     margin-top: 10px;
     line-height: 16px;
 }
+.footer__bottom__link:last-of-type{
+    float: left;
+}
+.rights{
+    float: right;
+}
+@media (max-width: 768px) {
+    .footer__logo{
+        background-image: url("../img/header/logo-5.png");
+        width: 141px;
+        height: 79px;
+    }
+}
+@media (max-width: 537px) {
+    .footer__logo{
+        background-image: url("../img/header/logo-6.png");
+        width: 68px;
+        height: 38px;
+    }
+    .footer__bottom__link:last-of-type,.rights{
+        float: none;
+    }
+    .footer__licenses{
+        font-size: 10px;
+    }
+    .vk{
+        background-image: url("../img/footer/vk-2.png");
+        width: 30px;
+        height: 18px;
+    }
+    .odnoklassniki{
+        background-image: url("../img/footer/odnoklassniki-2.png");
+        width: 11px;
+        height: 18px;
+    }
+    .inst{
+        background-image: url("../img/footer/inst-2.png");
+        width: 18px;
+        height: 18px;
+    }
+    .youtube{
+        background-image: url("../img/footer/youtube-2.png");
+        width: 24px;
+        height: 18px;
+    }
+}
+@media (max-width: 375px) {
+    .footer__bottom__info{
+        width: 156px;
+        padding-right: 10px;
+    }
+}
+
