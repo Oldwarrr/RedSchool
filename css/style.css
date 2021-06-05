@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .wrapper{
-    max-width: 1366px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 .container{
@@ -120,10 +120,13 @@ h1, h2, h3, h4, h5, h6 {
     height: 80px;
 }
 .header-logo{
+    flex-grow: 0.4;
+    height: inherit;
+}
+.header-logo{
     background: url("../img/header/logo-1.png") no-repeat;
     width: 121px;
     height: 68px;
-    flex-grow: 0.4;
 }
 .header__top{
     background-color: #7B8187;
@@ -616,3 +619,194 @@ footer{
     }
 }
 
+
+/*Главная страница*/
+
+
+.slider{
+    position: relative;
+    background-image: url("../img/home page/slider/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    max-width: 100%;
+    height: 592px;
+}
+.slider__info{
+    position: relative;
+    max-width: 1300px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 150px;
+
+}
+h1{
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 56px;
+}
+.slider__description{
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 676px;
+    margin: 10px 0 30px 0;
+}
+.slider__arrow{
+    position: absolute;
+    background: url("../img/home page/slider/arrow slider.png") center center no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    transform: translateY(-40%);
+}
+.left{
+    left: -80px;
+}
+.right{
+    background: url("../img/home page/slider/arrow slider-right.png") center center no-repeat;
+    right: -80px;
+}
+
+
+
+
+/*Слайдер чеки*/
+
+
+input[type="radio"] {
+    display: none;
+}
+.slider-controls {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    border: 1px solid #bab9bc;
+
+    margin-right: 2px;
+    cursor: pointer;
+}
+#check-1:checked ~ .slider-controls label[for="check-1"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-2:checked ~ .slider-controls label[for="check-2"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-3:checked ~ .slider-controls label[for="check-3"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-4:checked ~ .slider-controls label[for="check-4"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-5:checked ~ .slider-controls label[for="check-5"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-6:checked ~ .slider-controls label[for="check-6"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-7:checked ~ .slider-controls label[for="check-7"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-8:checked ~ .slider-controls label[for="check-8"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-9:checked ~ .slider-controls label[for="check-9"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#check-10:checked ~ .slider-controls label[for="check-10"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+
+
+@media (max-width: 1023px) {
+    .slider{
+        background-image: url("../img/home page/slider/bg-2.png");
+        height: 407px;
+    }
+    .slider__info{
+        margin: 0 110px;
+    }
+    .slider__arrow{
+        width: 40px;
+        background-size: contain;
+        height: 40px;
+    }
+    h1{
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .slider__description{
+        font-size: 24px;
+        line-height: 28px;
+        max-width: 340px;
+    }
+}
+@media (max-width: 761px) {
+    .slider{
+        background-image: url("../img/home page/slider/bg-3.png");
+        height: 303px;
+    }
+    .slider__info{
+        margin: 0 50px;
+    }
+    .slider__arrow{
+        width: 30px;
+        background-size: contain;
+        height: 30px;
+    }
+    h1{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .slider__description{
+        font-size: 18px;
+        line-height: 21px;
+        max-width: 250px;
+    }
+    .left{
+        left: -40px;
+    }
+    .right{
+        right: -40px;
+    }
+    .slider .btn{
+        min-width: 90px;
+        padding: 9px 2px 8px 5px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .slider-controls label{
+        width: 8px;
+        height: 8px;
+    }
+    .slider-controls{
+        margin: 10px 0;
+    }
+}
+@media (max-width: 374px) {
+    .slider{
+        background-image: url("../img/home page/slider/bg-3.png");
+
+    }
+    .slider-controls label{
+        width: 6px;
+        height: 6px;
+    }
+}
