@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 .container{
-    max-width: 1135px;
+    max-width: 1235px;
 
     margin: 0 auto;
     padding: 0 40px;
@@ -678,7 +678,7 @@ input[type="radio"] {
 }
 .slider-controls {
     text-align: center;
-    margin: 30px 0;
+    padding: 30px 0;
 }
 
 .slider-controls label {
@@ -797,7 +797,7 @@ input[type="radio"] {
         height: 8px;
     }
     .slider-controls{
-        margin: 10px 0;
+        padding: 10px 0;
     }
 }
 @media (max-width: 374px) {
@@ -808,5 +808,67 @@ input[type="radio"] {
     .slider-controls label{
         width: 6px;
         height: 6px;
+    }
+}
+
+.general__advantages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 80px 0;
+
+}
+.general__advantages__item{
+    margin: 0 5px;
+}
+.general__advantages__img{
+    max-width: 100%;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+
+
+}
+.general__advantages__info{
+    margin-top: 10px;
+
+
+}
+.general__advantages__title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 8px;
+}
+.general__advantages__description{
+    font-size: 18px;
+    line-height: 21px;
+}
+
+@media (max-width: 642px) {
+    .general__advantages{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+        padding: 30px 0 20px;
+    }
+    .general__advantages__title{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .general__advantages__description{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .general__advantages__img:nth-of-type(1),.general__advantages__img:nth-of-type(2){
+        order: 0;
+    }
+    .general__advantages__info:nth-of-type(1),.general__advantages__info:nth-of-type(2){
+        order: 1;
+    }
+    .general__advantages__img:nth-of-type(3),.general__advantages__img:nth-of-type(4){
+        order: 2;
+    }
+    .general__advantages__info:nth-of-type(3),.general__advantages__info:nth-of-type(4){
+        order: 3;
     }
 }
