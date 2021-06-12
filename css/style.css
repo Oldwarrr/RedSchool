@@ -1336,3 +1336,235 @@ h3{
         line-height: 16px;
     }
 }
+
+
+
+/*Ученики*/
+.students{
+    max-width: 1480px;
+    padding: 0 60px 50px;
+}
+.students__grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin: 30px 0;
+}
+.students__item{
+    padding: 30px 30px;
+    border: 1px solid #5F5B5B;
+}
+.students__item:hover{
+    border: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.students__item__person{
+    display: flex;
+    align-items: center;
+}
+.students__item>p{
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 20px;
+}
+.students__item__person>p{
+    margin-left: 20px;
+    font-size: 24px;
+    line-height: 28px;
+}
+.students .slider__arrow{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.students .slider-controls{
+ padding: 0;
+}
+.students input[type="radio"]:last-child,
+.students .slider-controls label:last-child{
+    display: none;
+}
+#students__check-1:checked ~ .slider-controls label[for="students__check-1"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#students__check-2:checked ~ .slider-controls label[for="students__check-2"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#students__check-3:checked ~ .slider-controls label[for="students__check-3"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#students__check-4:checked ~ .slider-controls label[for="students__check-4"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#students__check-5:checked ~ .slider-controls label[for="students__check-5"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#students__check-6:checked ~ .slider-controls label[for="students__check-6"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+
+@media (max-width: 936px) {
+    .students{
+        padding: 0 0 50px;
+    }
+    .students h2{
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .students__grid{
+        display: block;
+        margin: 20px 0;
+    }
+    .students__item{
+        max-width: 688px;
+        margin: 0 auto;
+        padding: 30px 50px;
+    }
+    .students__item:not(:first-of-type){
+        display: none;
+    }
+    .students input[type="radio"]:last-child,
+    .students .slider-controls label:last-child{
+        display: inline-block;
+    }
+    .students .slider__arrow{
+        border-radius: 50%;
+        background-color: #fff;
+        width: 40px;
+        height: 40px;
+    }
+    .students .slider__arrow.left{
+        left: 0;
+    }
+    .students .slider__arrow.right{
+       right: 0;
+    }
+}
+@media (max-width: 539px) {
+    .students{
+        padding: 0 20px 40px;
+    }
+    .students__grid{
+        margin-bottom: 10px;
+    }
+    .students h2{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .students__item{
+        padding: 23px 23px 28px;
+    }
+    .students__item__person img{
+        width: 63px;
+        height: 63px;
+    }
+    .students__item__person>p{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .students__item>p{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .students .slider__arrow.left{
+        left: -20px;
+    }
+    .students .slider__arrow.right{
+        right: -20px;
+    }
+}
+@media (max-width: 441px) {
+    .students{
+        padding: 0 5px 40px;
+    }
+    .students .slider__arrow{
+        width: 30px;
+        height: 30px;
+    }
+    .students .slider__arrow.left{
+        left: -15px;
+    }
+    .students .slider__arrow.right{
+        right: -15px;
+    }
+}
+
+
+/*Sign-up*/
+
+
+.sign-up{
+    position: relative;
+    background: url("../img/home page/sign up/bg.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 35px 40px;
+
+
+}
+.sign-up::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+.sign-up .questions__form{
+    position: relative;
+    padding: 40px 62px;
+    margin: 0 auto;
+    z-index: 2;
+}
+.sign-up__title,.sign-up__title.two{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.sign-up .btn{
+    margin-top: 30px;
+}
+.sign-up__title.two{
+    display: none;
+}
+
+@media (max-width: 509px) {
+    .sign-up{
+        padding: 41px 20px 53px;
+
+
+    }
+    .sign-up .questions__form{
+        max-width: 350px;
+        padding: 30px;
+    }
+    .sign-up__title,.sign-up__title.two{
+        display: none;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+    .sign-up__title.two{
+        display: block;
+    }
+    .sign-up .btn{
+        margin-top: 15px;
+        min-width: 130px;
+        padding: 9px 5px 8px 5px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
