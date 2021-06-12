@@ -213,8 +213,6 @@
             <div class="btn more">Скрыть больше программ</div>
         </div>
     </div>
-
-
     <div class="questions">
         <div class="container">
             <div class="questions__grid">
@@ -226,7 +224,7 @@
 
                 <form action="post" class="questions__form">
                     <input type="text" placeholder="Ваше имя*" required>
-                    <input type="text" placeholder="Телефон*">
+                    <input type="text" placeholder="Телефон*" required>
                     <input type="email" placeholder="E-mail">
                     <select name="city" id="city">
                         <option value="1" selected>Город*</option>
@@ -234,13 +232,26 @@
                         <option value="2">Мончегорск</option>
                         <option value="3">Кандалакша</option>
                     </select>
-                    <input type="checkbox" id="questions__checkbox">
+                    <input type="checkbox" id="questions__checkbox" required>
                     <label class="questions__form__checkbox__label" for="questions__checkbox">Нажимая кнопку «Записаться», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных *</label>
                 </form>
                 <a href="#" class="btn">Отправить</a>
             </div>
         </div>
     </div>
+
+
+    <div class="reportage">
+        <div class="container">
+            <h2>Видеорепортаж об автошколе по каналу «РОССИЯ 1»</h2>
+            <div class="reportage__flex">
+                <div class="reportage__info">Нужно придумать короткий текст для пояснения.</div>
+<!--                <div class="reportage__video"></div>-->
+                <img class="reportage__video" src="img/home%20page/reportage/screenshot-reportage-2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
 </main><footer>
             <div class="container">
                 <div class="footer__top">
@@ -276,7 +287,7 @@
                         <div class="number black">+7 (928) 188-08-38</div>
                         <div class="footer__social">
                             <a href="#" class="footer__social__link vk"></a>
-                            <a href="#" class="footer__social__link classmates"></a>
+                            <a href="#" class="footer__social__link odnoklassniki"></a>
                             <a href="#" class="footer__social__link inst"></a>
                             <a href="#" class="footer__social__link youtube"></a>
                         </div>
