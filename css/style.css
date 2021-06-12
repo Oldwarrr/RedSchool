@@ -1145,7 +1145,12 @@ h3{
     color: #7B8187;
     background: url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat right #fff;
     background-position-x: 95%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
+}
+.questions__form select::-ms-expand {
+    display: none;
 }
 .questions__form select option{
     color: #000;
