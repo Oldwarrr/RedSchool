@@ -1573,3 +1573,114 @@ h3{
         line-height: 16px;
     }
 }
+
+
+/*Map*/
+.map{
+    padding: 70px 0 80px;
+}
+.map img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.map-2,.map-3{
+    display: none;
+}
+@media (max-width: 768px) {
+    .map{
+        padding: 50px 0;
+    }
+    .map-1{
+        display: none;
+    }
+    .map-2{
+        display: block;
+    }
+}
+@media (max-width: 375px) {
+    .map{
+        padding: 40px 0;
+    }
+    .map-2{
+        display: none;
+    }
+    .map-3{
+        display: block;
+    }
+}
+
+/*Social*/
+
+.social{
+    padding-bottom: 40px;
+}
+.social h3{
+    margin: 0 34px 0 0;
+}
+.social .container{
+    display: flex;
+    align-items: center;
+
+}
+.social__flex{
+    display: flex;
+    align-items: center;
+}
+.social__item{
+    width: 78px;
+    height: 72px;
+    background-color: #E31E24;
+    margin-right: 18px;
+}
+
+.social__item.vk{
+    background-image: url("../img/home page/social/vk.png");
+}
+.social__item.classmates{
+    background-image: url("../img/home page/social/classmates.png");
+}
+.social__item.inst{
+    background-image: url("../img/home page/social/inst.png");
+}
+.social__item.youtube{
+    background-image: url("../img/home page/social/youtube.png");
+}
+.social__item.vk,.social__item.classmates,.social__item.inst,.social__item.youtube {
+    background-position: center;
+}
+
+@media (max-width: 748px) {
+    .social h3{
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .social .container{
+        display: block;
+    }
+    .social__flex{
+        margin-top: 20px;
+    }
+    .social__item{
+        width: 78px;
+        height: 72px;
+    }
+}
+@media (max-width: 510px) {
+    .social h3{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .social__item{
+        width: 68px;
+        height: 63px;
+    }
+}
+@media (max-width: 375px) {
+    .social__item{
+        margin-right: 0;
+    }
+    .social__flex{
+        justify-content: space-between;
+    }
+}
