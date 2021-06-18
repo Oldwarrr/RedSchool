@@ -1709,11 +1709,11 @@ h3{
 .branch-links__link{
     display: block;
     color: #000;
-    margin-right: 10px;
     margin-bottom: 10px;
 }
 .branch-links__link:not(:last-of-type){
     text-decoration: underline;
+    margin-right: 10px;
 }
 
 
@@ -1754,12 +1754,373 @@ h3{
 .about__advantages{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
+    align-items: center;
+    grid-gap: 10px;
 }
-.about__advantages__item{
-    text-align: center;
+.about__advantages>img{
+    display: block;
+    margin: 0 auto;
 }
 .about__advantages__item__description{
     max-width: 173px;
+    height: 42px;
+
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+.about__text{
+    font-size: 24px;
+    line-height: 28px;
+}
+.about__text.history{
+    margin: 80px 0;
+}
+.about__target{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+.about__target img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.about__target p{
+    position: absolute;
+    max-width: 271px;
+    left: 12px;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+@media (max-width: 919px) {
+    .about__title{
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .about{
+        display: block;
+        /*padding: 0 20px;*/
+    }
+    .about__nav{
+        display: none;
+    }
+    .about__target{
+        margin-bottom: 50px;
+    }
+
+}
+@media (max-width: 705px) {
+    .about{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .about__title{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .about__advantages{
+        max-width: 500px;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        padding: 0 25px;
+
+    }
+    .about__advantages img{
+        object-fit: cover;
+        width: 100%;
+        max-width: 128px;
+        height: auto;
+    }
+    .about__text,.about__advantages__item__description{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .about__advantages__item__description{
+        margin: 0 auto;
+    }
+    .about__advantages__item__description:nth-of-type(1),.about__advantages__item__description:nth-of-type(2){
+        order: 1;
+    }
+    .about__advantages img:nth-of-type(3),.about__advantages img:nth-of-type(4){
+        order: 2;
+    }
+    .about__advantages__item__description:nth-of-type(3),.about__advantages__item__description:nth-of-type(4){
+        order: 3;
+    }
+    .about__advantages img:nth-of-type(5),.about__advantages img:nth-of-type(6){
+        order: 4;
+    }
+    .about__advantages__item__description:nth-of-type(5),.about__advantages__item__description:nth-of-type(6){
+        order: 5;
+    }
+    .about__advantages img:nth-of-type(7),.about__advantages img:nth-of-type(8){
+        order: 6;
+    }
+    .about__advantages__item__description:nth-of-type(7),.about__advantages__item__description:nth-of-type(8){
+        order: 7;
+    }
+    .about__target{
+        margin-bottom: 40px;
+    }
+    .about__target .about__text{
+       margin-top: 20px;
+
+    }
+    .about__text.history{
+        margin: 40px 0;
+    }
+    .about__target .about__text{
+        max-width: 130px;
+    }
+    .delete{
+        display: none;
+    }
+}
+@media (max-width: 300px) {
+    .about__advantages{
+        grid-gap: 15px;
+        padding: 0;
+    }
+    .about__target{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+.qualities{
+    font-size: 24px;
+    line-height: 28px;
+    margin: 30px 0 80px;
+}
+.qualities li{
+    margin-top: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+.qualities li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E31E24;
+}
+
+
+.licenses{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(50px, 0.55fr) 1fr minmax(50px, 0.55fr);
+    grid-template-rows: 1fr;
+    column-gap: 33px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+.licenses .slider__arrow{
+    top: 45%;
+    transform: translateY(-45%);
+}
+.licenses .slider__arrow.right{
+    right: 10%;
+    transform: translateX(-10%);
+}
+.licenses .slider__arrow.left{
+    left: 10%;
+    transform: translateX(-10%);
+}
+
+
+.licenses img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.licenses>img:first-of-type,.licenses img:last-of-type{
+    max-width: 158px;
+}
+.licenses>img:first-of-type{
+    margin-right: auto;
+}
+.licenses .second img:nth-of-type(1){
+    max-width: 265px;
+    margin: 0 auto;
+    vertical-align: middle;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.licenses>img:last-of-type{
+    margin-left: auto;
+}
+.second{
+    max-width: 367px;
+    width: 100%;
+    background-color: #E31E24;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+@media (max-width: 546px) {
+    .qualities{
+        margin: 20px 0 40px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .qualities li{
+        padding-left: 18px;
+    }
+    .qualities li::before{
+        width: 8px;
+        height: 8px;
+    }
+    .licenses{
+        margin-top: 20px;
+    }
+}
+
+.chain-of-school{
+    width: 100%;
+    height: auto;
+    background-image: url("../img/about school/background/4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 84px 0 53px 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 80px;
+}
+.chain-of-school__advantages{
+    margin: 22px 0 47px;
+
+}
+.chain-of-school__advantages li{
+    position: relative;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 20px;
     margin-top: 10px;
+}
+.chain-of-school__advantages li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #E31E24;
+}
+
+#chain-of-school__check-1:checked ~ .slider-controls label[for="chain-of-school__check-1"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#chain-of-school__check-2:checked ~ .slider-controls label[for="chain-of-school__check-2"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#chain-of-school__check-3:checked ~ .slider-controls label[for="chain-of-school__check-3"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#chain-of-school__check-4:checked ~ .slider-controls label[for="chain-of-school__check-4"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#chain-of-school__check-5:checked ~ .slider-controls label[for="chain-of-school__check-5"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+#chain-of-school__check-6:checked ~ .slider-controls label[for="chain-of-school__check-6"] {
+    background-color: #E31E24;
+    border-color: #E31E24;
+}
+
+@media (max-width: 768px) {
+    .chain-of-school__advantages{
+        margin: 22px 0 30px;
+
+    }
+}
+@media (max-width: 705px) {
+    .chain-of-school{
+        background-size: contain;
+        margin-top: 50px;
+    }
+    .chain-of-school .about__text{
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .chain-of-school__advantages li{
+        padding-left: 18px;
+        font-size: 14px;
+        line-height: 16px;
+
+    }
+    .chain-of-school__advantages li::before{
+        width: 8px;
+        height: 8px;
+    }
+
+}
+@media (max-width: 597px) {
+
+    .chain-of-school{
+        padding: 20px 0 20px 20px;
+        background-position: center right;
+    }
+    .chain-of-school .about__text{
+        max-width: 60%;
+    }
+    .chain-of-school__advantages{
+        max-width: 47%;
+        margin: 20px 0;
+    }
+    .chain-of-school__advantages li{
+        padding-left: 16px;
+    }
+    .chain-of-school__advantages li::before{
+        width: 6px;
+        height: 6px;
+    }
+    .chain-of-school .btn{
+        min-width: 130px;
+        padding: 9px 2px 8px 5px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+
+
+/*Learning*/
+.learning h2{
+    margin-bottom: 30px;
+}
+.learning .about__text, .learning img:first-of-type{
+    margin-bottom: 80px;
+}
+.learning img{
+    width: 100%;
+}
+@media (max-width: 642px) {
+    .learning .about__text, .learning img:first-of-type{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 428px) {
+    .learning .about__text, .learning img:first-of-type{
+        margin-bottom: 40px;
+    }
+    .learning h2{
+        margin-bottom: 20px;
+    }
 }
